@@ -1,0 +1,257 @@
+/* 
+	version:	1.0
+	author:		Cristina Martín Pumar	
+	date:		20150518
+*/
+
+/* 
+	RESET de momento lo dejamos aparte 
+	resetear todos los estilos para cualquier navegador 
+*/
+/* @import url("reset.css"); */
+
+/* 
+	ETIQUETA, ELEMENTO O TAG
+	dar un estilo general a toda la web
+*/
+
+body{
+	background-image: url("http://es.html.net/tutorials/css/butterfly.gif");
+	background: url("http://es.html.net/tutorials/css/butterfly.gif");
+	background-repeat: no-repeat;
+	font-family:arial;
+}
+
+/* los enlaces no subrayados */
+a{
+	text-decoration:none;
+}
+
+/* los enlaces al ponerme encima */
+a:hover{
+	color:orange;
+}
+ol,ul {
+	list-style-type: disc;
+}
+
+ol h3, ul h3{
+	font-weight:bold;
+	margin-bottom:15px;
+}
+li{
+	margin-bottom:8px;
+}
+
+/* listas anidas */
+ol ol, ul ul{
+	margin-left: 20px;
+	list-style-type: circle;
+}
+
+
+h1 {	
+  font-size: 50px;
+  margin-bottom:20px;
+  color: green;
+  font-family: arial;
+  text-align: center;	
+}
+
+strong{
+	font-weight:bold;
+}
+
+p{
+	font-family: arial;
+	font-size:16px;
+	text-align:justify;
+	line-height:20px;
+}
+mark{
+	background-color:green;
+}
+
+article
+{
+	border: 1px solid gray;
+	padding: 20px;
+	margin-bottom: 25px;
+}
+
+article h2
+{
+	background-color: blue;
+	color: white;
+	font-size: 25px;
+	padding: 5px 0;
+	
+}
+
+fieldset{
+	border:2px solid grey;
+	padding: 20px 30px;
+	margin-bottom: 20px;
+}
+
+legend{
+	font-weight: bold;
+}
+
+/* 
+	validadciones formularios
+
+*/
+form input[type="text"]:required:valid{
+	
+	border: 2px solid green;
+	
+}
+
+form input[type="text"]:focus:required:invalid{
+	border: 2px solid red;
+	
+}
+
+/* 
+	ESTILOS REUTILIZABLES
+	Regla con selector por CLASS para usar en todas las páginas 
+*/
+
+/* Para aplicar a mas de una etiqueta se utiliza la "," */
+table.tabla_azul, .tabla_azul tr, .tabla_azult td{
+	border:1px solid grey;
+	text-align:center;
+	font-family:arial;
+	color:#0099FF;
+	font-size:35px;
+}
+
+.tabla_azul td, .tabla_azul th{
+	padding:10px;
+	height:40px;
+}
+
+.tabla_azul th{
+	color: grey;
+}
+
+.numero {
+	font-size: 50px;
+	color: #0099FF;
+	font-family: arial;
+}
+
+.verde {
+	color: green;
+}
+
+.enlaces {
+	background-color: green;
+	font-family: arial;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+.cartel{
+	width:250px;
+	/* al poner "auto" se adapta al ancho que le hayamos dado */
+	height:auto;
+	float:left;
+	margin-right:30px;
+}
+
+.caratula{
+	width:40px;
+	height:auto;
+	/* float:left;*/
+	margin-right:10px;
+}
+
+.btn_volver{
+	background-color:#DDD;
+}
+
+/*
+	PAGINAS
+	Tendremos una seccion por cada página de nuestra web
+*/
+/* NAV */
+#logo img{
+	width: 35px;
+	height:35px;
+}
+
+
+/* HOME */
+#home{
+}
+
+/* CARTELERA */
+#cartelera li h3{
+	color:#0076EC;
+	font-size:20px;
+}
+
+#cartelera li h3:hover{
+	color:orange;
+
+}
+
+/* CARTELERA_DETALLE */
+#cartelera_detalle h1{
+	color:blue;
+	text-align:left;
+}
+
+#container {
+	width:900px;
+	min-height:700px;
+	margin:0 auto;
+	padding:0 20px;
+	border-right:1px solid grey;
+	border-left:1px solid grey;
+	background-color: white;
+	clear:both;
+}
+
+/* Regla con selector por ID */
+#encabezado {
+	border:1px solid green;
+}
+
+#rosas{
+	width: 100px;
+	height: 100px;
+}
+
+#ficha {
+	float:left;
+	width:580px;
+	min-height: 360px;
+	margin-bottom:20px;
+}
+
+/* Seleccionar los parrafos de la ficha */
+#ficha p{
+	font-size:35px;
+	line-height: 45px;
+}
+
+#ficha .destacado{
+	color:green;
+	font-weight:600;
+}
+
+
+#sinopsis{
+	/* al poner "auto" se adapta al ancho que le hayamos dado */
+
+	float:left;
+	height:200px;
+	overflow:scroll;
+}
+
+
