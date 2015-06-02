@@ -2,14 +2,16 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
 <jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
 
-<style>
+<style rel="stylesheet" type="text/css">
 		
 	p:first-line { color: red; }
 	
 	/* el uppercase no funciona en google crono */
 	
-	p:first-line { text-transform: uppercase;}
+	p:first-line   { text-transform: uppercase;}
 	p:first-letter { text-transform: uppercase; color:blue;}
+	p:before       {content: "Parrafo -";}
+	p:after        {content: "...";}
 	
 </style>
 
@@ -23,7 +25,6 @@
 		<div class="cnt_article">
 			
 			<div>
-
 				<p><strong><em>:first_line Red</em></strong></p>
 				
 				<p id="p1">p1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Curabitur quis neque elementum, auctor ex quis, aliquet turpis.<em>Fusce et neque pulvinar nunc </em>ullamcorper tristique. Donec blandit semper elementum. Pellentesque habitant morbi tristique senectus <strong>et netus et <em>malesuada</em> </strong>fames ac turpis egestas. Phasellus lacinia vehicula ipsum eu scelerisque. Vestibulum blandit risus eget est gravida dignissim. Praesent eget nunc imperdiet, pellentesque mauris et, feugi at ligula. In ornare sed enim eu fringilla.</p>
@@ -34,8 +35,13 @@
 				<p><strong><em>:first-letter uppercase and Blue</em></strong></p>
 				
 				<p id="p3">p3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Curabitur quis neque elementum, auctor ex quis, aliquet turpis.<em>Fusce et neque pulvinar nunc </em>ullamcorper tristique. Donec blandit semper elementum. Pellentesque habitant morbi tristique senectus <strong>et netus et <em>malesuada</em> </strong>fames ac turpis egestas. Phasellus lacinia vehicula ipsum eu scelerisque. Vestibulum blandit risus eget est gravida dignissim. Praesent eget nunc imperdiet, pellentesque mauris et, feugi at ligula. In ornare sed enim eu fringilla.</p>
+				
+			    <p><strong><em>:before :after/em></strong></p>
+				
+				<p id="p4">p4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Curabitur quis neque elementum, auctor ex quis, aliquet turpis.<em>Fusce et neque pulvinar nunc </em>ullamcorper tristique. Donec blandit semper elementum. Pellentesque habitant morbi tristique senectus <strong>et netus et <em>malesuada</em> </strong>fames ac turpis egestas. Phasellus lacinia vehicula ipsum eu scelerisque. Vestibulum blandit risus eget est gravida dignissim. Praesent eget nunc imperdiet, pellentesque mauris et, feugi at ligula. In ornare sed enim eu fringilla.</p>
 			
 			</div>
+
 		</div> <!--  cnt_article -->		
 
 		<footer>

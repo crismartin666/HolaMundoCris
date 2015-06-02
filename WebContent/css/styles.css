@@ -69,8 +69,22 @@ p{
 	line-height:20px;
 }
 mark{
-	background-color:green;
+	background-color:lime;
 }
+
+header{
+	text-align: center;
+}
+
+footer{
+	border: 1px solid gray;
+}
+
+.cnt_article {
+	border: 1px solid gray; 
+	margin-bottom: 25px;
+	padding: 10px
+}	
 
 article
 {
