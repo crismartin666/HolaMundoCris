@@ -17,7 +17,16 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="css/styles.css?v=1.0" type="text/css">
+	
+	<!--  font awesome -->
+	<link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.css">
 
+	<!--  custom IconMoon -->
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+
+	<!--  esto es un hack -->
+	<!-- El siguiente ejemplo carga scripts solamente para los navegadores de tipo < Internet Explorer 9: -->
+	<!-- comentario condicinal -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -34,15 +43,19 @@
 	</noscript>
 
 	<!-- Cabecera de la página -->
-	<header>
+	<header id="head">
 	
-		<div id="logo">
-		
-			<a href="" title="Volver a la home">
-				<img alt="imagen de mi logotipo" src="img/rosas.jpg"/>
-			</a>
+		<div class="clearfix">
+	
+			<div id="logo">
+			
+				<a href="" title="Volver a la home">
+					<img alt="imagen de mi logotipo" src="img/dado.jpg"/>
+				</a>
+			</div>
+			
+			<h1>Ejemplos HTML5, CSS3 y Js</h1>		
 		</div>
-		
-		<h1> Ejemplos HTML5, CSS y Js</h1>		
 	
-	</header>
+	<!-- Navegación menu principal -->
+	<!-- el final del </header> al final del fichero nav.jsp -->

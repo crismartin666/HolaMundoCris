@@ -10,121 +10,212 @@
 */
 /* @import url("reset.css"); */
 
+/****************************
+	ClearFix
+*****************************/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
 /* 
 	ETIQUETA, ELEMENTO O TAG
 	dar un estilo general a toda la web
 */
-
-body{
+body {
 	background-image: url("http://es.html.net/tutorials/css/butterfly.gif");
 	background: url("http://es.html.net/tutorials/css/butterfly.gif");
 	background-repeat: no-repeat;
-	font-family:arial;
+	font-family: arial;
 }
 
 /* los enlaces no subrayados */
-a{
-	text-decoration:none;
+a {
+	text-decoration: none;
 }
 
 /* los enlaces al ponerme encima */
-a:hover{
-	color:orange;
+
+a:hover {
+	color: orange;
 }
-ol,ul {
+
+/*************
+Para cuando en impresoras por ejemplo queramos que se escriba la dirección de la URL a la que apunta
+
+a:after { 
+	content: " (" attr(href) ") "; 
+}
+
+*************/
+
+
+
+ol, ul {
 	list-style-type: disc;
 }
 
-ol h3, ul h3{
-	font-weight:bold;
-	margin-bottom:15px;
+ol h3, ul h3 {
+	font-weight: bold;
+	margin-bottom: 15px;
 }
-li{
-	margin-bottom:8px;
+
+li {
+	margin-bottom: 8px;
 }
 
 /* listas anidas */
-ol ol, ul ul{
+ol ol, ul ul {
 	margin-left: 20px;
 	list-style-type: circle;
 }
 
-
-h1 {	
-  font-size: 50px;
-  margin-bottom:20px;
-  color: green;
-  font-family: arial;
-  text-align: center;	
-}
-
-strong{
-	font-weight:bold;
-}
-
-p{
+h1 {
+	font-size: 50px;
+	margin-bottom: 20px;
+	color: blue;
 	font-family: arial;
-	font-size:16px;
-	text-align:justify;
-	line-height:20px;
-}
-mark{
-	background-color:lime;
-}
-
-header{
 	text-align: center;
 }
 
-footer{
-	border: 1px solid gray;
+strong {
+	font-weight: bold;
+}
+
+p {
+	font-family: arial;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 20px;
+}
+
+mark {
+	background-color: lime;
+}
+
+header {
+	text-align: center;
+}
+
+/* contendor para separar cabecera del cuerpo */
+#content {
+	padding-top: 150px;
+}
+
+#btn_ganador {
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 19;
+	-moz-border-radius: 19;
+	border-radius: 19px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+#btn_ganador:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+
+/*************
+	HEAD
+**************/
+#head {
+	position: fixed;
+	background-color: #FFF;
+	width: 920px;
+	padding-top: 10px;
+	z-index: 100;
+}
+
+#head #logo, #head h1 {
+	float: left;
+}
+
+/*************
+	ASIDE
+**************/
+#home aside {
+	float: left;
+	margin-top: 0px;
+	background-color: white;
+	min-height: 300px;
+}
+
+#home aside h2 {
+	color: blue;
+}
+
+#home section {
+	float: left;
+	margin-right: 9%;
+	width: 60%;
+	background-color: white;
+}
+
+footer {
+	border: 1px solid grey;
 }
 
 .cnt_article {
-	border: 1px solid gray; 
+	border: 1px solid grey;
 	margin-bottom: 25px;
 	padding: 10px
-}	
+}
 
-article
-{
-	border: 1px solid gray;
+article {
+	border: 1px solid grey;
 	padding: 20px;
 	margin-bottom: 25px;
 }
 
-article h2
-{
-	background-color: blue;
-	color: white;
+article h2 {
+	background-color: rgb(229, 223, 223);
+	color: blue;
 	font-size: 25px;
 	padding: 5px 0;
-	
 }
 
-fieldset{
-	border:2px solid grey;
+fieldset {
+	border: 2px solid grey;
 	padding: 20px 30px;
 	margin-bottom: 20px;
 }
 
-legend{
+legend {
 	font-weight: bold;
 }
 
 /* 
-	validadciones formularios
+	validacion formularios
 
 */
-form input[type="text"]:required:valid{
-	
+form input[type="text"]:required:valid {
 	border: 2px solid green;
-	
 }
 
-form input[type="text"]:focus:required:invalid{
+form input[type="text"]:focus:required:invalid {
 	border: 2px solid red;
-	
 }
 
 /* 
@@ -133,20 +224,20 @@ form input[type="text"]:focus:required:invalid{
 */
 
 /* Para aplicar a mas de una etiqueta se utiliza la "," */
-table.tabla_azul, .tabla_azul tr, .tabla_azult td{
-	border:1px solid grey;
-	text-align:center;
-	font-family:arial;
-	color:#0099FF;
-	font-size:35px;
+table.tabla_azul, .tabla_azul tr, .tabla_azult td {
+	border: 1px solid grey;
+	text-align: center;
+	font-family: arial;
+	color: #0099FF;
+	font-size: 35px;
 }
 
-.tabla_azul td, .tabla_azul th{
-	padding:10px;
-	height:40px;
+.tabla_azul td, .tabla_azul th {
+	padding: 10px;
+	height: 40px;
 }
 
-.tabla_azul th{
+.tabla_azul th {
 	color: grey;
 }
 
@@ -169,103 +260,155 @@ table.tabla_azul, .tabla_azul tr, .tabla_azult td{
 	background-color: yellow;
 }
 
-.cartel{
-	width:250px;
+.cartel {
+	width: 250px;
 	/* al poner "auto" se adapta al ancho que le hayamos dado */
-	height:auto;
-	float:left;
-	margin-right:30px;
+	height: auto;
+	float: left;
+	margin-right: 30px;
 }
 
-.caratula{
-	width:40px;
-	height:auto;
+.caratula {
+	width: 200px;
+	height: auto;
 	/* float:left;*/
-	margin-right:10px;
+	margin-right: 10px;
 }
 
-.btn_volver{
-	background-color:#DDD;
+.cartura a:hove {
+	
 }
+
+.btn_volver {
+	background-color: #DDD;
+}
+
+.dado {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.sinopsis_pelicula {
+	hidden: true;
+}
+
 
 /*
 	PAGINAS
 	Tendremos una seccion por cada pÃ¡gina de nuestra web
 */
+
 /* NAV */
-#logo img{
+#logo img {
 	width: 35px;
-	height:35px;
+	height: 35px;
 }
 
-
 /* HOME */
-#home{
+#home {
+	
 }
 
 /* CARTELERA */
-#cartelera li h3{
-	color:#0076EC;
-	font-size:20px;
+#cartelera ul {
+	float: left;
+	padding-lef: 2px;
 }
 
-#cartelera li h3:hover{
-	color:orange;
+#cartelera li {
+	float: left;
+	margin-right: 2px;
+	width: 30%;
+}
 
+#cartelera .cartel {
+	position: relative;
+	width: 200px;
+}
+
+#cartelera .titulo {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 90%;
+	padding: 3% 5%;
+	min-height: 40px;
+	display: none;
+}
+
+#cartelera .cartel:hover .titulo {
+	display: block;
+}
+
+#cartelera .titulo h3 {
+	color: blue;
+	text-align: center;
+}
+
+/* el tercero  de la lista sin margen a la derecha */
+#cartelera li:nth-child(3n+0) {
+	margin-right: 0px;
+}
+
+#cartelera li h3 {
+	color: #0076EC;
+	font-size: 20px;
+	float: down;
+}
+
+#cartelera li h3:hover {
+	color: orange;
 }
 
 /* CARTELERA_DETALLE */
-#cartelera_detalle h1{
-	color:blue;
-	text-align:left;
+#cartelera_detalle h1 {
+	color: blue;
+	text-align: left;
 }
 
 #container {
-	width:900px;
-	min-height:700px;
-	margin:0 auto;
-	padding:0 20px;
-	border-right:1px solid grey;
-	border-left:1px solid grey;
+	width: 900px;
+	min-height: 700px;
+	margin: 0 auto;
+	padding: 0 20px;
+	border-right: 1px solid grey;
+	border-left: 1px solid grey;
 	background-color: white;
-	clear:both;
+	clear: both;
 }
 
 /* Regla con selector por ID */
 #encabezado {
-	border:1px solid green;
+	border: 1px solid green;
 }
 
-#rosas{
+#rosas {
 	width: 100px;
 	height: 100px;
 }
 
 #ficha {
-	float:left;
-	width:580px;
+	float: left;
+	width: 580px;
 	min-height: 360px;
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 
 /* Seleccionar los parrafos de la ficha */
-#ficha p{
-	font-size:35px;
+#ficha p {
+	font-size: 35px;
 	line-height: 45px;
 }
 
-#ficha .destacado{
-	color:green;
-	font-weight:600;
+#ficha .destacado {
+	color: green;
+	font-weight: 600;
 }
 
-
-#sinopsis{
+#sinopsis {
 	/* al poner "auto" se adapta al ancho que le hayamos dado */
-
-	float:left;
-	height:200px;
-	overflow:scroll;
+	float: left;
+	height: 200px;
+	overflow: scroll;
 }
-
-
