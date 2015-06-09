@@ -224,7 +224,7 @@ form input[type="text"]:focus:required:invalid {
 */
 
 /* Para aplicar a mas de una etiqueta se utiliza la "," */
-table.tabla_azul, .tabla_azul tr, .tabla_azult td {
+table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	border: 1px solid grey;
 	text-align: center;
 	font-family: arial;
@@ -238,6 +238,28 @@ table.tabla_azul, .tabla_azul tr, .tabla_azult td {
 }
 
 .tabla_azul th {
+	background-color: rgb(221, 218, 218);
+	color: blue;
+}
+
+
+/* Para aplicar a mas de una etiqueta se utiliza la "," */
+table.tabla_gris, .tabla_gris tr, .tabla_gris td {
+	background-color: rgb(221, 218, 218);
+	border: 1px solid grey;
+	text-align: center;
+	font-family: arial;
+	color: blue;
+	font-size: 35px;
+}
+
+.tabla_gris td, .tabla_gris th {
+	
+	padding: 10px;
+	height: 40px;
+}
+
+.tabla_gris th {
 	color: grey;
 }
 
