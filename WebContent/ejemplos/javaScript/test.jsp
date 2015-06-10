@@ -12,7 +12,77 @@
   <script src="../../js/utilidades.js"></script>
   
   <script>
+  
+
 	  
+  	  //Testear funciones predefinidas
+  	  QUnit.test( "Funciones predefinidas", function( assert ) {
+  		
+  		  assert.ok( escape('Hola Mundo')  == 'Hola%20Mundo', "'Hola Mundo'");
+  		  assert.ok( escape('Cristina Martín')  == 'Cristina%20Mart%EDn', "'Cristina Martín'");
+  		  
+  		  assert.ok( 10 + "1"  == '101', "Sin parseInt 10 + \"1\" = 101");
+  		  assert.ok( 10 + parseInt("1")  == '11', "Con parseInt 10 + \"1\" = 11");
+  		  
+	  	  assert.ok( isNaN("123abc"), "123abc No es un numero");
+	  	  assert.ok( !isNaN("123"),   "123 es un numero");
+	  	  
+	  	  var jonWaine = new Array("John", "Wayne", 45);  		
+	  	  
+	  		assert.ok( jonWaine[0] == "John"  ,  "John [0]");
+	  		assert.ok( jonWaine[1] == "Wayne" ,  "Wayne [1]");
+	  		assert.ok( jonWaine[2] == 45      ,  "45 [2]");
+	  		assert.ok( jonWaine.length == 3   ,  "longitud 3");
+
+		  	//Concatenar
+	  		var pelicula = new Array("El bueno el feo y el malo", "1973", "nipuidea");
+	  		var concatenar = jonWaine.concat(pelicula);
+	  		
+	  		assert.ok( concatenar[0] == "John"  ,  "John [0]");
+	  		assert.ok( concatenar[1] == "Wayne" ,  "Wayne [1]");
+	  		assert.ok( concatenar[2] == 45      ,  "45 [2]");
+	  		assert.ok( concatenar[3] == "El bueno el feo y el malo"  ,  "El bueno el feo y el malo [3]");
+	  		assert.ok( concatenar[4] == "1973" ,  "1973 [4]");
+	  		assert.ok( concatenar[5] == "nipuidea"    ,  "nipuidea [5]");
+	  		assert.ok( concatenar.length == 6   ,  "longitud 6");
+
+	  		//join	  		
+	  		assert.ok( pelicula.join("#") == "El bueno el feo y el malo#1973#nipuidea"   ,  "pelicula.join(#)");
+
+	  		//reverse
+	  		var alreves = jonWaine.reverse();
+	  		assert.ok( alreves[0] == 45      ,  "45 [0]");
+	  		assert.ok( alreves[1] == "Wayne" ,  "Wayne [1]");
+	  		assert.ok( alreves[2] == "John"  ,  "John [2]");
+
+	  		//sort
+	  		var sorJonWaine = jonWaine.sort();
+	  		assert.ok( sorJonWaine[0] == 45      ,  "45 [0]");
+	  		assert.ok( sorJonWaine[1] == "John"  ,  "John [1]");
+	  		assert.ok( sorJonWaine[2] == "Wayne" ,  "Wayne [2]");
+	  		
+	  		var ordenarNum = new Array(-5,5,3,1,0);
+	  		
+	  		ordenar = ordenarNum.sort();
+	  		assert.ok( ordenarNum[0] == -5      ,  "-5");
+	  		assert.ok( ordenarNum[1] == 0      ,  "0");
+	  		assert.ok( ordenarNum[2] == 1      ,  "1");
+	  		assert.ok( ordenarNum[3] == 3      ,  "3");
+	  		assert.ok( ordenarNum[4] == 5      ,  "5");
+
+	  		var ordenarStr = new Array("b","a","A","h");
+	  		
+	  		ordenar = ordenarStr.sort();
+	  		assert.ok( ordenarStr[0] == "A"     ,  "A");
+	  		assert.ok( ordenarStr[1] == "a"     ,  "a");
+	  		assert.ok( ordenarStr[2] == "b"     ,  "b");
+	  		assert.ok( ordenarStr[3] == "h"     ,  "h");
+
+
+
+
+  	  });
+  
 	  //Nuestro codigo de test para es_par
 	  QUnit.test( "es_par (numero) ", function( assert ) {
 

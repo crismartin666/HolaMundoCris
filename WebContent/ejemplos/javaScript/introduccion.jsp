@@ -1,7 +1,7 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
 
-<script src="../../js/utilidades.js" type="text/javascript"></script>
+<script src="js/utilidades.js"></script>
 
 <section id="javaScript" class="clearFix">
 
