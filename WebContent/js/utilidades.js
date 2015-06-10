@@ -171,7 +171,7 @@ function precio_entrada(diaSemana, edad) {
 				
 			} else {
 				
-				if ( (edad >25) && (edad <=50) ){
+				if ( (edad >25) && (edad <50) ){
 
 					precio = 5;
 					
