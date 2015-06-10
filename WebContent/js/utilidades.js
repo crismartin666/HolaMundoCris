@@ -128,35 +128,50 @@ function es_vocal(letra) {
 	Precio de la entrada de cine seg�n el d�a de la semana y la edad del cin�filo
 	@param diaSemana: d�a de la semana, de Lunes a domingo
 	@param edad: edad de la persona, formato numero entero
-	@return: precio de la entrada en euros
+	@return: precio de la entrada en euros, "El dia o la edad no son correctos" si hay algún dato erroneo
 
 */
 function precio_entrada(diaSemana, edad) {
+	
+	//Si hay algún error el precio es 0€
 	var precio=0;
+	var datoIncorrecto = "El dia o la edad no son correctos"
+
+	if (edad == null || diaSemana == null) {
+		return datoIncorrecto;
+	} 
+	
+	//Comprobar que la edad es un número entero
+	if (edad % 1 != 0) {
+		
+		return datoIncorrecto;
+	} else if(edad <= 0) {
+		
+		return datoIncorrecto;
+	}
 	
 	diaSemana = diaSemana.toLowerCase();
 	
 	switch (diaSemana){
 	
 		case "lunes":
-			if (edad <35) {
+			if (edad <=35) {
 
 				precio = 2;
 				
 			} else {
 				
 				precio = 5;
-				
 			}
 			break;
 		case "martes":
-			if (edad <25) {
+			if (edad <=25) {
 
 				precio = 2;
 				
 			} else {
 				
-				if ( (edad >25) && (edad <50) ){
+				if ( (edad >25) && (edad <=50) ){
 
 					precio = 5;
 					
@@ -168,7 +183,7 @@ function precio_entrada(diaSemana, edad) {
 			break;
 
 		case "miercoles":
-			if (edad <18) {
+			if (edad <=18) {
 
 				precio = 3;
 				
@@ -184,7 +199,7 @@ function precio_entrada(diaSemana, edad) {
 			}
 			break;
 		case "jueves":
-			if (edad <18) {
+			if (edad <=18) {
 
 				precio = 5;
 				
@@ -195,8 +210,14 @@ function precio_entrada(diaSemana, edad) {
 			}
 			break;
 		
-		default:
+		case "viernes":
+		case "sabado":
+		case "domingo":
 			precio = 10;
+			break;
+		
+		default:
+			return datoIncorrecto;
 	}//switch
 	
 	return precio;

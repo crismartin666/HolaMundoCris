@@ -163,6 +163,7 @@
 		<h3>JavaScript</h3>
 			<ul>
 				<li><a title="ejemplo de javaScript" href="ejemplos/javaScript/introduccion.jsp">JavaScript</a></li>
+				<li><a title="ejemplo de javaScript" href="ejemplos/javaScript/test.jsp">Test</a></li>
 			</ul>
 		</li>
 			
