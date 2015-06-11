@@ -164,6 +164,7 @@
 			<ul>
 				<li><a title="ejemplo de javaScript" href="ejemplos/javaScript/introduccion.jsp">JavaScript</a></li>
 				<li><a title="ejemplo de javaScript" href="ejemplos/javaScript/test.jsp">Test</a></li>
+				<li><a title="ejemplo de javaScript" href="ejemplos/javaScript/objetos.jsp">Objetos</a></li>
 			</ul>
 		</li>
 			

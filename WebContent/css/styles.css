@@ -31,9 +31,11 @@
 	dar un estilo general o base a toda la Web
 */
 body {
+	/*
 	background-image: url("http://es.html.net/tutorials/css/butterfly.gif");
 	background: url("http://es.html.net/tutorials/css/butterfly.gif");
 	background-repeat: no-repeat;
+	*/
 	font-family: arial;
 }
 
@@ -220,7 +222,15 @@ header {
 	padding: 10px
 }
 
+.cnt_article h2{
+	color:#cf5b89;
+	border-bottom: 1px solid #cf5b89;
+	margin-bottom: 25px;
+}
 
+.cnt_article li{
+	margin-left: 25px;
+}
 
 /* 
 	validacion formularios
@@ -326,6 +336,7 @@ table.tabla_gris, .tabla_gris tr, .tabla_gris td {
 	height: 100px;
 	float: left;
 }
+
 
 .sinopsis_pelicula {
 	hidden: true;
@@ -445,4 +456,9 @@ table.tabla_gris, .tabla_gris tr, .tabla_gris td {
 	float: left;
 	height: 200px;
 	overflow: scroll;
+}
+
+#rosas {
+	width: 50px;
+	height: 50px;
 }
