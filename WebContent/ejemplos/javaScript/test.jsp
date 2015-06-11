@@ -26,7 +26,11 @@
   		  
 	  	  assert.ok( isNaN("123abc"), "123abc No es un numero");
 	  	  assert.ok( !isNaN("123"),   "123 es un numero");
-	  	  
+  	  });
+	  
+  	  //Testear Arrays
+	  QUnit.test( "Manejo de Arrays", function( assert ) {
+
 	  	  var jonWaine = new Array("John", "Wayne", 45);  		
 	  	  
 	  		assert.ok( jonWaine[0] == "John"  ,  "John [0]");
@@ -77,9 +81,6 @@
 	  		assert.ok( ordenarStr[1] == "a"     ,  "a");
 	  		assert.ok( ordenarStr[2] == "b"     ,  "b");
 	  		assert.ok( ordenarStr[3] == "h"     ,  "h");
-
-
-
 
   	  });
   
