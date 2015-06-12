@@ -31,11 +31,8 @@
 	dar un estilo general o base a toda la Web
 */
 body {
-	/*
 	background-image: url("http://es.html.net/tutorials/css/butterfly.gif");
-	background: url("http://es.html.net/tutorials/css/butterfly.gif");
 	background-repeat: no-repeat;
-	*/
 	font-family: arial;
 }
 

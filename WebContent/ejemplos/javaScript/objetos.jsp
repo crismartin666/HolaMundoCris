@@ -12,11 +12,11 @@
 			<p></p>
 		</header>
 		
-		<img id=rosas alt="imagen de rosas" src="img/rosas.jpg"/>
-		<img id=rosas alt="imagen de rosas" src="img/rosas.jpg"/>
-		<img id=rosas alt="imagen de rosas" src="img/rosas.jpg"/>
-		<img id=rosas alt="imagen de rosas" src="img/rosas.jpg"/>
-		<img id=rosas alt="imagen de rosas" src="img/rosas.jpg"/>
+		<img id=rosas alt="imagen de rosas" src="img/dado.jpg"/>
+		<img id=rosas alt="imagen de rosas" src="img/dado.jpg"/>
+		<img id=rosas alt="imagen de rosas" src="img/dado.jpg"/>
+		<img id=rosas alt="imagen de rosas" src="img/dado.jpg"/>
+		<img id=rosas alt="imagen de rosas" src="img/dado.jpg"/>
 		
 		<div class="cnt_article">
 		
@@ -72,7 +72,8 @@
 					<strong>links:</strong>
 					<span id="d_links"></span>
 				</li>
-			</ul>				
+			</ul>
+							
 			<h2>location</h2>
 			<ul>
 				<li>
@@ -108,6 +109,39 @@
 					<strong>replace:</strong>
 					<input type="button" id="l_replace" value = "location.replace(URL)">
 				</li>
+			</ul>
+
+
+			<h2>screen</h2>
+			<ul>
+				<li>
+					<strong>availHeight:</strong>
+					<span id="s_availHeight"></span>
+				</li>
+
+				<li>
+					<strong>availWidth:</strong>
+					<span id="s_availWidth"></span>
+				</li>
+				<li>
+					<strong>width:</strong>
+					<span id="s_width"></span>
+				</li>
+				<li>
+					<strong>height:</strong>
+					<span id="s_height"></span>
+				</li>
+				<li>
+					<strong>colorDepth:</strong>
+					<span id="s_colorDepth"></span>
+				</li>
+			</ul>
+			
+			<style>
+				body {
+					background-image: none !important;
+				}
+			</style>
 
 			<script type="text/javascript">
 			
@@ -119,20 +153,30 @@
 				//obtener id del boton open
 				var btn_w_open = document.getElementById("w_open");
 				btn_w_open.onclick = function(){
-				
+			
 					console.info('Vamos a abrir la ventana de parrafos_y_enlaces.jsp');
-					window.open("http://localhost:8080/HolaMundoCris/ejemplos/basicos/parrafos_y_enlaces.jsp", "Parrafos",
+					window.open("http://localhost:8080/HolaMundoCris/ejemplos/javaScript/objetos.jsp", "Parrafos",
 							"heigth=400px, width=400px, menubar=no, toolbar=no, resizable=no");
-					
-
 				};
 				
+				//No funciona "resizable=no", habría que meter este codigo javascript en la ventana a abrir
+				window.onresize = function(){
+					window.resizeTo(400,400);
+					
+				};
+				
+				window.onclick = function(){
+					window.resizeTo(400,400);
+					
+				};
+
 				//obtener id del boton close
 				var btn_w_close = document.getElementById("w_close");
 				btn_w_close.onclick = function(){
 				
 					console.info("Probar el funcionamiento del metodo window.close");
 					
+					/* Sólo se puede cerrar desde javascript una ventana abierta por javascript y no si se ha vierto por el navegador */
 					window.close();
 					
 
@@ -196,6 +240,7 @@
 				document.write("<ul>");
 				for (i=0; i< document.images.length; i++){
 					
+					//Solo sacar 5 imagenes
 					if(i == 5){
 						break;
 					}
@@ -216,9 +261,9 @@
 				document.writeln("<ul>");
 				for (i=0; i< document.links.length; i++){
 					
-					if(i == 5){
-						break;
-					}
+					//Solo sacar 5 links
+					if(i == 5)break;
+
 					document.writeln("<li>");
 					document.writeln(document.links[i]);
 					document.writeln("</li>");
@@ -258,7 +303,36 @@
 					console.info("Probar el funcionamiento del metodo location.reload");
 					location.reload();
 				};
+
+				//obtener id del boton replace
+				var btn_l_replace = document.getElementById("l_replace");
+				btn_l_replace.onclick = function(){
 				
+					console.info("Probar el funcionamiento del metodo location.replace");
+					location.replace("//www.formacion.ipartek.com/");
+				};
+				
+				//Objeto screen
+				
+				//obtener id del elemento availHeight
+				console.info("Probar el funcionamiento de la propiedad screen.availHeight");
+				document.getElementById("s_availHeight").innerHTML = screen.availHeight;
+
+				//obtener id del elemento availWidth
+				console.info("Probar el funcionamiento de la propiedad screen.availWidth");
+				document.getElementById("s_availWidth").innerHTML = screen.availWidth;
+
+				//obtener id del elemento Height
+				console.info("Probar el funcionamiento de la propiedad screen.Height");
+				document.getElementById("s_height").innerHTML = screen.height;
+				
+				//obtener id del elemento Width
+				console.info("Probar el funcionamiento de la propiedad screen.Width");
+				document.getElementById("s_width").innerHTML = screen.width;
+
+				//obtener id del elemento colorDepth
+				console.info("Probar el funcionamiento de la propiedad screen.colorDepth");
+				document.getElementById("s_colorDepth").innerHTML = screen.colorDepth;
 
 			</script>
 
